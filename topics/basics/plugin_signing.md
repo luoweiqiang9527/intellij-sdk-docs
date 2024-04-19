@@ -2,7 +2,7 @@
 
 # Plugin Signing
 
-<link-summary>Plugin signing ensures that end users get unmodified plugin distribution that was actually published to JetBrains Marketplace.</link-summary>
+<link-summary>插件签名可确保最终用户获得实际发布到 JetBrains Marketplace 的未经修改的插件发行版。</link-summary>
 
 Plugin Signing is a mechanism introduced in the 2021.2 release cycle to increase security in [JetBrains Marketplace](https://plugins.jetbrains.com) and all of our IntelliJ-based IDEs.
 

@@ -2,11 +2,11 @@
 
 # Creating a Plugin Gradle Project
 
-<link-summary>Creating and running a Gradle-based IntelliJ Platform plugin projects.</link-summary>
+<link-summary>创建并运行基于 Gradle 的 IntelliJ 平台插件项目。</link-summary>
 
 This documentation page describes a Gradle-based plugin project generated with the [New Project Wizard](https://www.jetbrains.com/help/idea/new-project-wizard.html), but the project generated with [](plugin_github_template.md) covers all the described files and directories.
 
-## Creating a Plugin with New Project Wizard
+## 使用新建项目向导创建插件
 
 <procedure title="Create IDE Plugin" id="create-ide-plugin">
 
@@ -42,9 +42,9 @@ Launch the <control>New Project</control> wizard via the <ui-path>File | New | P
 
 </procedure>
 
-### Components of a Wizard-Generated Gradle IntelliJ Platform Plugin
+### 向导生成的 Gradle IntelliJ 平台插件的组件
 
-For the example `my_plugin` created with the steps describes above, the _IDE Plugin_ generator creates the following directory content:
+对于使用上述步骤创建的示例`my_plugin`，_IDE Plugin_生成器将创建以下目录内容：
 
 ```plantuml
 @startuml
@@ -153,7 +153,7 @@ tasks {
 
 > Consider using the [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template) which additionally provides CI setup covered with GitHub Actions.
 
-#### Plugin Gradle Properties and Plugin Configuration File Elements
+#### 插件 Gradle 属性和插件配置文件元素
 
 The Gradle properties `rootProject.name` and `project.group` will not, in general, match the respective [plugin configuration file](plugin_configuration_file.md) <path>plugin.xml</path> elements [`<name>`](plugin_configuration_file.md#idea-plugin__name) and [`<id>`](plugin_configuration_file.md#idea-plugin__id).
 There is no IntelliJ Platform-related reason they should as they serve different functions.
@@ -163,7 +163,7 @@ The `<name>` element (used as the plugin's display name) is often the same as `r
 The `<id>` value must be a unique identifier over all plugins, typically a concatenation of the specified <control>Group</control> and <control>Artifact</control>.
 Please note that it is impossible to change the `<id>` of a published plugin without losing automatic updates for existing installations.
 
-## Running a Plugin With the `runIde` Gradle task
+## 使用`runIde`Gradle 任务运行插件
 
 Gradle projects are run from the IDE's Gradle Tool window.
 

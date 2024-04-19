@@ -1,10 +1,10 @@
 <!-- Copyright 2000-2023 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
 
-# IntelliJ Platform Plugin Template
+# IntelliJ 平台插件模板
 
-<link-summary>IntelliJ Platform Plugin Template is a GitHub template containing a minimal preconfigured plugin project and GitHub Actions CI workflows that cover building, testing and deploying the plugin.</link-summary>
+<link-summary>IntelliJ 平台插件模板是一个 GitHub 模板，包含一个最小的预配置插件项目和 GitHub Actions CI 工作流，涵盖构建、测试和部署插件。</link-summary>
 
-The IntelliJ Platform Plugin Template is the alternative solution for creating a new Gradle-based IntelliJ Platform plugin with the [New Project Wizard](creating_plugin_project.md).
+IntelliJ 平台插件模板是创建新的基于 Gradle 的 IntelliJ 平台插件的替代解决方案，该插件使用 [New Project Wizard](creating_plugin_project.md).
 
 [IntelliJ Platform Plugin Template][gh:plugin-template] is a GitHub repository that provides a pure boilerplate template to make it easier to create a new Gradle-based plugin project.
 

@@ -1,22 +1,22 @@
 <!-- Copyright 2000-2024 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
 
-# Developing a Plugin
+# 开发插件
 
-<link-summary>Develop an IntelliJ Platform plugin using Gradle and Gradle IntelliJ Plugin.</link-summary>
+<link-summary>使用 Gradle 和 Gradle IntelliJ 插件开发 IntelliJ 平台插件。</link-summary>
 
 IntelliJ Platform plugins can be developed by using either [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/) or [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/download/) as your IDE.
-It is highly recommended to always use the latest available version, as the plugin development tooling support from _Plugin DevKit_ continues supporting new features.
+强烈建议始终使用最新的可用版本，因为 _Plugin DevKit_ 的插件开发工具支持继续支持新功能。
 
-Before starting with the actual development, make sure to understand all requirements to achieve best [](plugin_user_experience.md).
+在开始实际开发之前，请确保了解所有要求以实现最佳效果 [](plugin_user_experience.md).
 
 <include from="intellij_platform.md" element-id="pluginAlternatives"/>
 
 ## Gradle IntelliJ Plugin
 
-The recommended solution for building IntelliJ Platform plugins is [](tools_gradle_intellij_plugin.md).
+构建 IntelliJ 平台插件的推荐解决方案是 [](tools_gradle_intellij_plugin.md).
 
-The IntelliJ IDEA Ultimate and Community editions provide the necessary plugins to support Gradle-based plugin development: _Gradle_ and _Plugin DevKit_.
-To verify these plugins are installed and enabled, see the help section about [Managing Plugins](https://www.jetbrains.com/help/idea/managing-plugins.html).
+IntelliJ IDEA Ultimate 和 Community 版本提供了支持基于 Gradle 的插件开发所需的插件：_Gradle_ 和 _Plugin DevKit_。
+要验证这些插件是否已安装并启用，请参阅有关 [Managing Plugins](https://www.jetbrains.com/help/idea/managing-plugins.html).
 
 <include from="snippets.md" element-id="pluginDevKitAvailability"/>
 
