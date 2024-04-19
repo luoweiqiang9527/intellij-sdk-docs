@@ -9,10 +9,10 @@ import icons.SdkIcons;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Demonstrates adding an action group to a menu statically in plugin.xml, and then creating a menu item within
- * the group at runtime. See plugin.xml for the declaration of {@link DynamicActionGroup}, and note the group
- * declaration does not contain an action. {@link DynamicActionGroup} is based on {@link ActionGroup} because menu
- * children are determined on rules other than just positional constraints.
+ * 演示如何在 plugin.xml 中静态地将操作组添加到菜单中，然后在其中创建菜单项
+ * 运行时的组。有关 {@link DynamicActionGroup} 的声明，请参阅plugin.xml，并记下该组
+ * 声明不包含操作。 {@link DynamicActionGroup} 基于 {@link ActionGroup}，因为菜单
+ * 儿童是根据规则决定的，而不仅仅是位置限制。
  */
 public class DynamicActionGroup extends ActionGroup {
 

@@ -11,7 +11,7 @@ import icons.SdkIcons;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Creates an action group to contain menu actions. See plugin.xml declarations.
+ * 创建包含菜单操作的操作组。请参阅plugin.xml声明。
  */
 public class CustomDefaultActionGroup extends DefaultActionGroup {
 

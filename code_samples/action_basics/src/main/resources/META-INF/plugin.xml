@@ -75,10 +75,10 @@
       </action>
     </group>
     <!--
-      CustomDefaultActionGroup demonstrates declaring an action group based on a ActionGroup class supplied by this
-      plugin. This group is to be inserted atop the Editor Popup Menu. It declares one action in the group.
-      The group and action implementations are internationalized, so their declarations do not use the text or
-      description attributes. Instead, the information is defined in the BasicActionsBundle.
+      CustomDefaultActionGroup 演示如何声明基于以下提供的 ActionGroup 类的操作组
+      插件。此组将插入到“编辑器弹出菜单”的顶部。它声明组中的一个操作。
+      组和操作实现是国际化的，因此其声明不使用文本或
+      description 属性。相反，该信息是在 BasicActionsBundle 中定义的。
     -->
     <group id="org.intellij.sdk.action.CustomDefaultActionGroup"
            class="org.intellij.sdk.action.CustomDefaultActionGroup"
@@ -88,8 +88,8 @@
               icon="SdkIcons.Sdk_default_icon"/>
     </group>
     <!--
-      DynamicActionGroup demonstrates declaring an action group without a static action declaration.
-      An action is added to the group programmatically in the DynamicActionGroup implementation.
+      DynamicActionGroup 演示如何在不声明静态操作的情况下声明操作组。
+      在 DynamicActionGroup 实现中以编程方式将操作添加到组中。
     -->
     <group id="org.intellij.sdk.action.DynamicActionGroup" class="org.intellij.sdk.action.DynamicActionGroup"
            popup="true" text="Dynamically Grouped Actions" description="SDK dynamically grouped action example"
