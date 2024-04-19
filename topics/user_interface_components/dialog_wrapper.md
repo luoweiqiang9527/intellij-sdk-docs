@@ -1,6 +1,6 @@
 <!-- Copyright 2000-2024 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
 
-<link-summary>Creating, showing, and getting the input provided by users in dialogs.</link-summary>
+<link-summary>创建、显示和获取用户在对话框中提供的输入。</link-summary>
 
 # Dialogs
 

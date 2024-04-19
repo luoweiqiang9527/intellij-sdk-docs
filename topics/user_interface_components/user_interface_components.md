@@ -1,8 +1,8 @@
 <!-- Copyright 2000-2023 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
 
-# User Interface Components
+# 用户界面组件
 
-<link-summary>Introduction to UI Components provided by IntelliJ Platform.</link-summary>
+<link-summary>IntelliJ Platform 提供的 UI 组件简介。</link-summary>
 
 <tldr>
 
@@ -11,7 +11,7 @@
 </tldr>
 
 The IntelliJ Platform includes a large number of custom [Swing](https://en.wikipedia.org/wiki/Swing_(Java)) components.
-Using those components in your plugins will ensure that your plugin looks and works consistently with the UI of the rest of the IDE, and can often reduce the code size compared to using the default Swing components.
+在插件中使用这些组件将确保插件的外观和工作与 IDE 其余部分的 UI 保持一致，并且与使用默认的 Swing 组件相比，通常可以减小代码大小.
 
 <snippet id="inspectingExistingUI">
 

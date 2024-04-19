@@ -2,7 +2,7 @@
 
 # Tool Windows
 
-<link-summary>Displaying additional information and controls in child windows of the IDE.</link-summary>
+<link-summary>在 IDE 的子窗口中显示其他信息和控件。</link-summary>
 
 <tldr>
 
@@ -12,22 +12,22 @@
 
 </tldr>
 
-_Tool windows_ are child windows of the IDE used to display information.
-These windows generally have their own toolbars (referred to as _tool window bars_) along the outer edges of the main window containing one or more _tool window buttons_, which activate panels displayed on the left, bottom, and right sides of the main IDE window.
+_Tool windows_是用于显示信息的 IDE 的子窗口。
+这些窗口通常沿着主窗口的外边缘有自己的工具栏（称为_tool窗口bars_），其中包含一个或多个_tool窗口buttons_，这些工具栏可激活显示在主 IDE 窗口的左侧、底部和右侧的面板。
 
-Each side contains two tool window groups, the primary and the secondary one, and only one tool window from each group can be active at a time.
+每侧包含两个刀具窗口组（主刀窗组和辅助刀具窗组），并且每个刀具窗口一次只能处于活动状态。
 
-Each tool window can show multiple tabs (or "contents", as they are called in the API).
-For example, the <control>Run</control> tool window displays a tab for each active run configuration, and the Version Control related tool windows display a fixed set of tabs depending on the version control system used in the project.
+每个工具窗口可以显示多个选项卡（或“内容”，因为它们在 API 中称为）。
+例如，“<control>运行</control>”工具窗口显示每个活动运行配置的选项卡，而与“版本控制”相关的工具窗口显示一组固定的选项卡，具体取决于项目中使用的版本控制系统。
 
-There are two main scenarios for the use of tool windows in a plugin.
-Using [declarative setup](#declarative-setup), a tool window button is always visible, and the user can activate it and interact with the plugin functionality at any time.
-Alternatively, using [programmatic setup](#programmatic-setup), the tool window is created to show the results of a specific operation, and can then be closed after the operation is completed.
+在插件中使用工具窗口有两种主要方案。
+Using [declarative setup](#declarative-setup), 工具窗口按钮始终可见，用户可以随时激活它并与插件功能进行交互。
+Alternatively, using [programmatic setup](#programmatic-setup), 创建工具窗口以显示特定操作的结果，然后在操作完成后关闭。
 
-### Declarative Setup
+### 声明式设置
 
 The tool window is registered in <path>[plugin.xml](plugin_configuration_file.md)</path> using the `com.intellij.toolWindow` extension point.
-The extension point attributes specify all the data which is necessary to display the tool window button:
+扩展点属性指定显示工具窗口按钮所需的所有数据：
 
 * The `id` attribute (required) of the tool window which corresponds to the text displayed on the tool window button.
 To provide a localized text, specify matching `toolwindow.stripe.[id]` message key (escape spaces with `_`) in the [resource bundle](plugin_configuration_file.md#idea-plugin__resource-bundle) (code insight supported in 2020.3 and later).
@@ -36,14 +36,14 @@ To provide a localized text, specify matching `toolwindow.stripe.[id]` message k
 
 * The `anchor`, meaning the side of the screen on which the tool window is displayed ("left" (default), "right" or "bottom")
 
-* The `secondary` attribute, specifying whether the tool window is displayed in the primary or the secondary group
+* The `secondary` 属性，指定工具窗口是显示在主组还是辅助组中
 
 * The `factoryClass` attribute (required), a class implementing [`ToolWindowFactory`](%gh-ic%/platform/platform-api/src/com/intellij/openapi/wm/ToolWindowFactory.kt).
 
-When the user clicks on the tool window button, the `createToolWindowContent()` method of the factory class is called, and initializes the UI of the tool window.
-This procedure ensures that unused tool windows don't cause any overhead in startup time or memory usage: if a user does not interact with the tool window, no plugin code will be loaded or executed.
+当用户单击工具窗口按钮时，将调用工厂类的`createToolWindowContent()`方法，并初始化工具窗口的 UI。
+此过程可确保未使用的工具窗口不会在启动时间或内存使用方面造成任何开销：如果用户不与工具窗互，则不会加载或执行插件代码。
 
-#### Conditional Display
+#### 条件显示
 
 If the tool window of a plugin should not be displayed for all projects:
 
@@ -69,10 +69,10 @@ Specify the `conditionClass` attribute in <path>plugin.xml</path> with a class i
 
 </tabs>
 
-Note, the condition is evaluated only once when the project is loaded.
-To show and hide a tool window dynamically while the user is working with the project, use [programmatic setup](#programmatic-setup) for tool window registration.
+请注意，在加载项目时，仅评估一次条件。
+要在用户使用项目时动态显示和隐藏工具窗口， use [programmatic setup](#programmatic-setup) for tool window registration.
 
-### Programmatic Setup
+### 编程设置
 
 For toolwindows shown only after invoking specific actions, use [`ToolWindowManager.registerToolWindow(String,RegisterToolWindowTaskBuilder)`](%gh-ic%/platform/platform-api/src/com/intellij/openapi/wm/ToolWindowManager.kt).
 

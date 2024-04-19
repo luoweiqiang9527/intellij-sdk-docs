@@ -1,8 +1,8 @@
 <!-- Copyright 2000-2024 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. -->
 
-# IDE Infrastructure
+# IDE 基础架构
 
-<link-summary>General IDE-level functionality (logging, error reporting, environment/installation info).</link-summary>
+<link-summary>常规 IDE 级功能（日志记录、错误报告、环境/安装信息）。</link-summary>
 
 ### Logging
 
