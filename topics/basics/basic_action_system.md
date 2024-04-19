@@ -2,7 +2,7 @@
 
 # Actions
 
-<link-summary>Adding custom actions to IntelliJ Platform-based IDEs menus and toolbar.</link-summary>
+<link-summary>向基于 IntelliJ Platform 的 IDE 菜单和工具栏添加自定义操作。</link-summary>
 
 <tldr>
 
@@ -12,20 +12,20 @@
 
 </tldr>
 
-The actions system allows plugins to add their items to IntelliJ Platform-based IDE menus and toolbars.
-For example, one of the action classes is responsible for the <ui-path>File | Open File...</ui-path> menu item and the <control>Open...</control> toolbar button.
+操作系统允许插件将其项目添加到基于 IntelliJ Platform 的 IDE 菜单和工具栏中。
+例如，其中一个操作类负责 <ui-path>File | Open File...</ui-path> 菜单项和 <control>Open...</control> 工具栏按钮。
 
 Actions in the IntelliJ Platform require a [code implementation](#action-implementation) and must be [registered](#registering-actions).
-The action implementation determines the contexts in which an action is available, and its functionality when selected in the UI.
-Registration determines where an action appears in the IDE UI.
-Once implemented and registered, an action receives callbacks from the IntelliJ Platform in response to user gestures.
+操作实现确定操作可用的上下文，以及在 UI 中选择操作时的功能。
+注册确定操作在 IDE UI 中的显示位置。
+实现并注册后，操作将接收来自 IntelliJ 平台的回调，以响应用户手势。
 
 The [](working_with_custom_actions.md) tutorial describes the process of adding a custom action to a plugin.
 The [](grouping_action.md) tutorial demonstrates three types of groups that can contain actions.
 
 ## Action Implementation
 
-An action is a class derived from the abstract class [`AnAction`](%gh-ic%/platform/editor-ui-api/src/com/intellij/openapi/actionSystem/AnAction.java).
+动作是从抽象类派生的类 [`AnAction`](%gh-ic%/platform/editor-ui-api/src/com/intellij/openapi/actionSystem/AnAction.java).
 For actions available during [dumb mode](indexing_and_psi_stubs.md#dumb-mode), extend [`DumbAwareAction`](%gh-ic%/platform/ide-core/src/com/intellij/openapi/project/DumbAwareAction.java).
 See also [](#useful-action-base-classes) below.
 

@@ -2,15 +2,15 @@
 
 # Services
 
-<link-summary>Registering and using on-demand services to encapsulate plugin functionality.</link-summary>
+<link-summary>注册和使用按需服务来封装插件功能。</link-summary>
 
 A _service_ is a plugin component loaded on demand when your plugin calls the `getService()` method of corresponding [`ComponentManager`](%gh-ic%/platform/extensions/src/com/intellij/openapi/components/ComponentManager.java) instance (see [Types](#types)).
 The IntelliJ Platform ensures that only one instance of a service is loaded even though it is called several times.
 Services are used to encapsulate logic operating on a set of related classes or to provide some reusable functionality that can be used across the plugin project.
 Conceptually, they don't differ from the service classes in other languages or frameworks.
 
-A service must have an implementation class used for service instantiation.
-A service may also have an interface class used to obtain the service instance and provide the service's API.
+服务必须具有用于服务实例化的实现类。
+服务还可以具有用于获取服务实例和提供服务的 API 的接口类。
 
 A service needing a shutdown hook/cleanup routine can implement [`Disposable`](%gh-ic%/platform/util/src/com/intellij/openapi/Disposable.java) and perform necessary work in `dispose()` (see [](disposers.md#automatically-disposed-objects)).
 

@@ -2,9 +2,9 @@
 
 # Dynamic Plugins
 
-<link-summary>Making a plugin dynamic allows installing, updating, and uninstalling it without IDE restart, as well as hot reloading plugin changes during the development.</link-summary>
+<link-summary>使插件动态化允许在不重启 IDE 的情况下安装、更新和卸载它，以及在开发过程中热重载插件更改。</link-summary>
 
-Starting with the **2020.1** release, installing, updating, and uninstalling plugins without restarting the IDE is available in the IntelliJ Platform.
+从 **2020.1** 版本开始，IntelliJ 平台中提供了在不重新启动 IDE 的情况下安装、更新和卸载插件的功能。
 
 During plugin development, [Auto-Reload](ide_development_instance.md#enabling-auto-reload) also allows code changes to take effect immediately in the sandbox IDE instance.
 To test whether dynamic installation works correctly, verify installing [local build distribution](publishing_plugin.md#building-distribution) succeeds (see [Troubleshooting](#troubleshooting)).
@@ -21,7 +21,7 @@ Please note that any unloading problems in a production environment will simply 
 
 ## Restrictions
 
-For a plugin to support this, all restrictions listed below must be met.
+对于支持此功能的插件，必须满足下面列出的所有限制。
 To verify a plugin locally, invoke <ui-path>Code | Analyze Code | Run Inspection by Name...</ui-path> and run <control>Plugin DevKit | Plugin descriptor | Plugin.xml dynamic plugin verification inspection</control> inspection on all plugin descriptor files.
 
 For plugins hosted on the [JetBrains Marketplace](https://plugins.jetbrains.com) the built-in [Plugin Verifier](https://blog.jetbrains.com/platform/2018/07/plugins-repository-now-integrates-with-the-plugin-verification-tool/) will run these checks automatically.

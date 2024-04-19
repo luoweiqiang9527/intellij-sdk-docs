@@ -2,12 +2,12 @@
 
 # Plugin Logo
 
-<link-summary>Plugin logo requirements and best practices.</link-summary>
+<link-summary>插件徽标要求和最佳实践。</link-summary>
 
-Beginning in version 2019.1, the IntelliJ Platform supports representing a plugin with a logo.
-A _Plugin Logo_ is intended to be a unique representation of a plugin's functionality, technology, or company.
+从版本 2019.1 开始，IntelliJ 平台支持使用徽标表示插件。
+_Plugin Logo_旨在成为插件功能、技术或公司的唯一表示。
 
-**Note:** icons and images used within a plugin have different requirements.
+**Note:** 插件中使用的图标和图像有不同的要求。
 See [](icons.md) for more information.
 
 ## Plugin Logo Usages

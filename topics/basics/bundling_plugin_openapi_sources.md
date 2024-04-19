@@ -2,9 +2,9 @@
 
 <!-- Copyright 2000-2024 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
 
-<link-summary>Exposing plugin's API sources for other plugins.</link-summary>
+<link-summary>为其他插件公开插件的 API 源。</link-summary>
 
-If a plugin exposes its own API that is meant to be used by other plugins, it is worth considering bundling the plugin's API sources in the ZIP distribution.
+如果一个插件公开了自己的 API 供其他插件使用，则值得考虑将插件的 API 源捆绑在 ZIP 发行版中。
 
 If a third-party plugin uses [](tools_gradle_intellij_plugin.md) and adds a dependency to the plugin which bundles sources in the ZIP distribution, sources will be automatically attached to the plugin library and visible in IDE when developers navigate to the API classes.
 Being able to see API sources drastically improves the development experience, and it is highly recommended to bundle them.

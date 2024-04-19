@@ -2,14 +2,14 @@
 
 # Class Loaders
 
-<link-summary>Introduction and tips for using plugin class loaders.</link-summary>
+<link-summary>使用插件类加载器的介绍和提示。</link-summary>
 
-A separate class loader is used to load the classes of each plugin.
-This allows each plugin to use a different library version, even if the same library is used by the IDE itself or by another plugin.
+一个单独的类加载器用于加载每个插件的类。
+这允许每个插件使用不同的库版本，即使 IDE 本身或其他插件使用相同的库也是如此。
 
 ## Bundled Libraries
 
-[Third-Party Software and Licenses](https://www.jetbrains.com/legal/third-party-software/) lists all bundled libraries and their versions for each product.
+[Third-Party Software and Licenses](https://www.jetbrains.com/legal/third-party-software/) 列出每个产品的所有捆绑库及其版本。
 
 ## Overriding IDE Dependencies
 

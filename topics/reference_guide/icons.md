@@ -2,7 +2,7 @@
 
 # Working with Icons
 
-<link-summary>Adding, organizing, and working with IntelliJ Platform and custom icons.</link-summary>
+<link-summary>添加、组织和使用 IntelliJ 平台和自定义图标。</link-summary>
 
 <tldr>
 
@@ -12,7 +12,7 @@
 
 </tldr>
 
-Icons are used widely by IntelliJ Platform plugins.
+图标被 IntelliJ 平台插件广泛使用。
 Plugins need icons mostly for [](basic_action_system.md), custom component renderers, [](tool_windows.md), etc.
 
 > Plugin _Logos_, which represent a plugin itself, have different requirements than icons used within a plugin.
@@ -21,7 +21,7 @@ Plugins need icons mostly for [](basic_action_system.md), custom component rende
 
 ## Platform vs. Custom Icons
 
-Plugins should reuse existing platform icons whenever possible.
+插件应尽可能重用现有的平台图标。
 Use [Icons list](https://jetbrains.design/intellij/resources/icons_list/) to browse existing icons.
 Platform icons are located in [`AllIcons`](%gh-ic%/platform/util/ui/src/com/intellij/icons/AllIcons.java).
 Icons from plugins are located in corresponding `<PLUGIN_NAME>Icons` class (e.g., [`GithubIcons`](%gh-ic%/plugins/github/gen/org/jetbrains/plugins/github/GithubIcons.java)).

@@ -2,32 +2,32 @@
 
 # Plugin User Experience (UX)
 
-<link-summary>Ensuring a good user experience for your plugin.</link-summary>
+<link-summary>确保您的插件获得良好的用户体验。</link-summary>
 
-_User Experience (UX)_ is a term describing the experience users feel when using a product.
-It covers not only aspects like visual presentation, performance, stability, or ease of use, but anything that affects the user's satisfaction.
-It's an overall impression of using a product that strongly indicates whether a user likes it or not.
+_User体验 （UX）_ 是一个术语，描述用户在使用产品时所感受到的体验。
+它不仅涵盖了视觉呈现、性能、稳定性或易用性等方面，还涵盖了影响用户满意度的任何方面。
+这是使用产品的整体印象，强烈表明用户是否喜欢它。
 
-IntelliJ Platform-based plugins are products, and providing a good UX is very important for retaining users and making them recommend your plugin to others.
-A bad plugin UX can negatively impact the user base, as users tend to abandon plugins that bring frustration, e.g., by instability, poor performance, or complexity.
+IntelliJ 基于平台的插件是产品，提供良好的用户体验对于留住用户并让他们向其他人推荐您的插件非常重要。
+糟糕的插件用户体验会对用户群产生负面影响，因为用户倾向于放弃带来挫败感的插件，例如不稳定、性能不佳或复杂性。
 
-The following sections explain the selected plugin UX areas.
+以下部分介绍了所选插件 UX 区域。
 
-## General Advice
+## 一般建议
 
-Great IntelliJ Platform plugins, like any other products, should bring significant value to users.
-When planning your work, talk and try to understand what your users need the most and prioritize crucial functionalities.
+与任何其他产品一样，出色的 IntelliJ 平台插件应该为用户带来巨大的价值。
+在规划您的工作时，请讨论并尝试了解您的用户最需要什么，并优先考虑关键功能。
 
 If you are unsure about an implemented solution, consider sharing the work in progress with a limited group of users (e.g., your colleagues or active community members) and gathering the feedback that will help you improve the final result.
 See the [Custom Release Channels](publishing_plugin.md#specifying-a-release-channel) section for information on how to automate sharing the pre-release plugin versions.
 
-Gathering feedback on the existing features can help identify what works well and what should be improved, which also increases the overall plugin quality.
+收集对现有功能的反馈可以帮助确定哪些功能运行良好，哪些功能需要改进，这也提高了插件的整体质量。
 
-## Ease of Use
+## 易用性
 
-Plugins should be just easy to use.
-Ideally, all the features should work out of the box after the installation, without any special user interactions, like manually enabling crucial plugin features.
-Default settings should reflect the typical plugin usage in a standard project.
+插件应该易于使用。
+理想情况下，所有功能都应该在安装后开箱即用，无需任何特殊的用户交互，例如手动启用关键的插件功能。
+默认设置应反映标准项目中的典型插件用法。
 
 All the settings and actions should be easy to find and be placed in the proper [settings](settings.md) or [action group](grouping_action.md), e.g.:
 
@@ -36,9 +36,9 @@ All the settings and actions should be easy to find and be placed in the proper 
 
 Plugins that are hard to configure with features that are hard to find may be quickly abandoned out of frustration.
 
-## Stability
+## 稳定性
 
-Plugins that throw a lot of errors visible in the messages panel and execute actions resulting in incorrect behavior, e.g., generating incorrect code, are considered unstable and unreliable.
+在消息面板中抛出大量可见错误并执行导致错误行为的操作（例如生成不正确的代码）的插件被认为是不稳定和不可靠的。
 
 To improve the overall stability and minimize the risk of introducing regression issues, it is critical to implement [functional tests](testing_plugins.md) with a low maintenance cost.
 It is a great safety net, which in the long term, will speed up your development and help you release new versions without the fear of breaking existing plugin features.
