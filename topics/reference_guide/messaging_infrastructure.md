@@ -1,8 +1,8 @@
 <!-- Copyright 2000-2023 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
 
-# Messaging Infrastructure
+# 消息传递基础结构
 
-<link-summary>Subscribing and publishing messages via message bus.</link-summary>
+<link-summary>通过消息总线订阅和发布消息。</link-summary>
 
 IntelliJ Platform's messaging infrastructure is an implementation of [Publisher Subscriber Pattern](https://w.wiki/5xaV) that provides additional features like _broadcasting on hierarchy_ and special _nested events_ processing (a _nested event_ is an event directly or indirectly fired from the callback of another event).
 
@@ -10,7 +10,7 @@ IntelliJ Platform's messaging infrastructure is an implementation of [Publisher 
 
 ## Design
 
-The following sections describe the main components of the messaging API:
+以下各节介绍了消息传递 API 的主要组件：
 - [Topic](#topic)
 - [Message Bus](#message-bus)
 - [Connection](#connection)
@@ -18,7 +18,7 @@ The following sections describe the main components of the messaging API:
 ### Topic
 
 The [`Topic`](%gh-ic%/platform/extensions/src/com/intellij/util/messages/Topic.java) class serves as an endpoint at the messaging infrastructure.
-Clients are allowed to subscribe to a specific topic within a bus and send messages to that topic within that particular bus.
+允许客户端在总线内订阅特定主题，并在该特定总线中向该主题发送消息。
 To clarify the corresponding message bus, a `Topic` field declaration should be annotated with `Topic.@AppLevel` and/or `Topic.@ProjectLevel`.
 
 ```plantuml

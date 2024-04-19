@@ -1,22 +1,22 @@
 <!-- Copyright 2000-2024 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
 
-# General Threading Rules
+# 一般线程规则
 
 <!-- short link: https://jb.gg/ij-platform-threading -->
 
-<link-summary>Threading rules for reading and writing to IntelliJ Platform data models, running and canceling background processes, and avoiding UI freezes.</link-summary>
+<link-summary>将读取和写入 IntelliJ 平台数据模型、运行和取消后台进程以及避免 UI 冻结的规则线程化。</link-summary>
 
-In the IntelliJ Platform, code is executed on one of two thread types:
-- [Event Dispatch Thread](https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html) (EDT) - also known as the UI thread. It is used for updating the UI and performing changes in the IDE data model. Operations performed on EDT must be fast.
-- background threads - used for performing costly operations.
+在 IntelliJ 平台中，代码在以下两种线程类型之一上执行：
+- [Event Dispatch Thread](https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html) (EDT) - 也称为 UI 线程。它用于更新 UI 并在 IDE 数据模型中执行更改。在 EDT 上执行的操作必须快速。
+- 后台线程 - 用于执行成本高昂的操作。
 
-## Read-Write Lock
+## 读写锁
 
 > [Thread Access Info](https://plugins.jetbrains.com/plugin/16815-thread-access-info) plugin visualizes Read/Write Access and Thread information in the debugger.
 
-In general, code-related data structures in the IntelliJ Platform are covered by a single [readers-writer (RW) lock](https://w.wiki/7dBy).
+通常，IntelliJ 平台中与代码相关的数据结构由单个 [readers-writer (RW) lock](https://w.wiki/7dBy).
 
-Access to the model must be performed in a read or write action for the following subsystems:
+必须在以下子系统的读取或写入操作中执行对模型的访问：
 
 - [](psi.md)
 - [](virtual_file_system.md) (VFS)

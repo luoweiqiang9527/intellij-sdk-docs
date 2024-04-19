@@ -1,13 +1,13 @@
 <!-- Copyright 2000-2024 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
 
-# Disposer and Disposable
+# 处置剂和一次性用品
 
-<link-summary>Cleaning up resources on plugin components' lifetime expiration.</link-summary>
+<link-summary>在插件组件的生存期到期时清理资源。</link-summary>
 
 The IntelliJ Platform's [`Disposer`](%gh-ic%/platform/util/src/com/intellij/openapi/util/Disposer.java) facilitates resource cleanup.
-If a subsystem keeps a set of resources alive coincident with a parent object's lifetime, the subsystem's resources should be registered with the `Disposer` to be released before or at the same time as the parent object.
+如果子系统使一组资源与父对象的生存期一致，则应将子系统的资源注册到“处置器”中，以便在父对象之前或同时发布。
 
-The most common resource type managed by `Disposer` is listeners, but there are other possible types:
+`Disposer`管理的最常见资源类型是侦听器，但还有其他可能的类型：
 * File handles, and database connections,
 * Caches and other significant data structures.
 
@@ -16,7 +16,7 @@ A `Disposable` is an interface for any object providing a `Disposable.dispose()`
 
 The `Disposer` supports chaining `Disposable` objects in parent-child relationships.
 
-## Automatically Disposed Objects
+## 自动处置的对象
 
 Many objects are disposed automatically by the platform if they implement the `Disposable` interface.
 The most important type of such objects is [services](plugin_services.md).
