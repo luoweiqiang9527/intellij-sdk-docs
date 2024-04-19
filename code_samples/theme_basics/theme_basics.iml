@@ -9,4 +9,7 @@
     <orderEntry type="jdk" jdkName="IntelliJ IDEA FIXME" jdkType="IDEA JDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="261c13ce-88ef-4a46-87a8-d4c88cee816a" />
+  </component>
 </module>

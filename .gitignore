@@ -14,6 +14,9 @@
 .idea/dictionaries
 .idea/libraries/Gradle__*.xml
 .idea/codeStyleSettings.xml
+.idea/sonarlint
+.idea/modules
+.idea/kotlinc.xml
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
