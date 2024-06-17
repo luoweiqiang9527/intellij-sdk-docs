@@ -3,10 +3,10 @@
 
 ## Quickstart
 
-Tool Windows are child windows of the IDE used to display information.
-These windows generally have their toolbars (referred to as tool window bars) along the outer edges of the main window containing one or more tool window buttons, which activate panels displayed on the left, bottom, and right sides of the main IDE window.
+工具窗口是用于显示信息的 IDE 的子窗口。
+这些窗口通常在主窗口的外边缘具有工具栏（称为工具窗口栏），其中包含一个或多个工具窗口按钮，这些按钮可激活显示在主 IDE 窗口的左侧、底部和右侧的面板。
 
-The current implementation displays a `JPanel` component containing simple icons and information about the actual system date, time, and timezone.
+当前实现显示一个“JPanel”组件，其中包含简单的图标以及有关实际系统日期、时间和时区的信息。
 Component is provided by the `CalendarToolWindowFactory.CalendarToolWindowContent` class through the `getContentPanel()` method invoked inside the `CalendarToolWindowFactory` implementation.
 
 ### Extension Points
